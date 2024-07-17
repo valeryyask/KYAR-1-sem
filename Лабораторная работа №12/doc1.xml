@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="forXML.css"?>
+<?xml-stylesheet type="text/css" href="doc1.xsl"?>
+<grammys>
+    <example>
+        <esong>Песня</esong>
+        <ename>Исполнитель</ename>
+        <ecountry>Страна</ecountry>
+        <eyear>Год</eyear>
+    </example>
+    <grammy>
+        <song>"Just like that"</song>
+        <name>Бонни Райт</name>
+        <country>США</country>
+        <year>2023</year>
+    </grammy>
+    <grammy>
+        <song>"Leave the door open"</song>
+        <name>Бруно Марс</name>
+        <country>США</country>
+        <year>2022</year></grammy>
+    <grammy>
+        <song>"I can't breathe"</song>
+        <name>О.Н.А.</name>
+        <country>США</country>
+        <year>2021</year></grammy>
+</grammys>

@@ -1,0 +1,20 @@
+h1, h2, h3
+{
+    color: blueviolet;
+font-family: Monotype Corsiva;
+}
+.kkk {
+  color:red;
+  font-family:'Times New Roman', Times, serif;
+  font-size:18pt;
+}
+.ppp {
+    color: yellow;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20pt;
+}
+.ttt {
+    color: green;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22pt;
+}

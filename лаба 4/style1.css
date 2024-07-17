@@ -1,0 +1,56 @@
+p:nth-of-type(1) {
+    border-left:5px solid brown;
+    border-bottom:5px solid yellow;
+    border-right:5px solid darkblue;
+    border-top:5px solid orange;
+}
+
+p:nth-of-type(2) {
+    border-left: 5px solid #007BA7;
+    border-right: 5px solid #007BA7;
+}
+
+p:nth-of-type(3) {
+    border-top: 5px solid rgb(229, 43, 80);
+    border-left: 5px dotted blue;
+    border-right: 5px dotted blue;
+    border-bottom: 5px dotted blue;
+}
+p:nth-of-type(4) {
+   border:1px dotted orange;
+}
+
+p:nth-of-type(5) {
+    border-top: 2px solid #000080;
+    border-bottom: 2px solid #000080;
+    border-left: 2px dashed #800000;
+    border-right: 2px dashed #800000;
+}
+
+p:nth-of-type(6) {
+    border-top: 5px double #B3446C;
+    border-right: 5px double #B3446C;
+    border-left: 5px double #B3446C;
+    border-bottom: 5px double #B3446C;
+}
+p:nth-of-type(7) {
+    border-top: 1px dashed #808000;
+    border-bottom: 3px solid #FF7518;
+}
+
+p:nth-of-type(8) {
+    border-left: 5px double #CC7722;
+    border-bottom: 5px double #CC7722;
+}
+
+p:nth-of-type(9) {
+    border-style: solid;
+    border-width: 5px 0 0 5px;
+    border-color: #B5A642;
+}
+
+p:nth-of-type(10) {
+    border-style: dotted;
+    border-width: 0 5px 5px 5px;
+    border-color: rgba(0, 40, 0, 1);
+}

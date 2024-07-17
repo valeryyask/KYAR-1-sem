@@ -1,0 +1,29 @@
+body h1, body h2, body h3 {
+  color: blueviolet;
+  font-family: Monotype Corsiva;
+}
+body ol li ul {
+  color: red;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 18pt;
+}
+body ol li ul {
+  color: yellow;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20pt;
+}
+body ol li ul {
+  color: green;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 22pt;
+}
+body table {
+  border-collapse: collapse;
+  font-size: medium;
+  border: black;
+}
+body p {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: blue;
+  font-size: 16pt;
+}/*# sourceMappingURL=14.2.css.map */

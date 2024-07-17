@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="14.0.css" rel="stylesheet" media="all">
+    <title>number5</title>
+</head>
+<body>
+    <svg width="1000" height="1000" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+            <radialGradient id="circleGradient">
+                <stop offset="40%" stop-color="green"/>
+                <stop offset="100%" stop-color="orange"/>
+            </radialGradient>
+        </defs>
+        <circle fill="url(#circleGradient)" cx="50" cy="50" r="45"></circle>
+    
+        <rect id="rectangle" stroke="orange" stroke-width="3" fill="pink" x="100" height="100" width="100">
+            <animate xlink:href="#rectangle" attributeName="stroke" dur="3s" from="orange" to="magenta" begin="0s" repeatCount="indefinite"></animate>
+        </rect>
+    
+        <ellipse id="ellipse" rx="70" ry="35" cx="280" cy="50" fill="purple">
+            <animate xlink:href="#ellipse" begin="click" dur="3s" attributeName="fill" from="pink" to="red"></animate>
+        </ellipse>
+    
+        <polygon id="kv" stroke="blue" stroke-width="3" fill="lightgreen" points="350 100, 400 0, 450 100">
+            <animate xlink:href="#kv" attributeName="stroke" from="white" to="brown" begin="mouseover" dur="5s"/>
+        </polygon>
+    
+        <polyline points="10 110, 250 110, 160 160, 460 160" stroke="purple" stroke-width="2" fill="none"></polyline>
+</svg>
+</body> 
+</html>
+
+ 

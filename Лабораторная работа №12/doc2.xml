@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/css" href="forXML.css"?>
+<!DOCTYPE grammys [
+<!ELEMENT grammys (example, grammy)>
+<!ELEMENT example (esong, ename, ecountry, eyear)>
+<!ELEMENT grammy (song, name, country, year)>
+<!ELEMENT esong (#PCDATA)>
+<!ELEMENT ename (#PCDATA)>
+<!ELEMENT ecountry (#PCDATA)>
+<!ELEMENT eyear (#PCDATA)>
+<!ELEMENT song (#PCDATA)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ENTITY enamed "-">
+]>
+<grammys>
+    <example>
+        <esong>&enamed;Песня&enamed;</esong>
+        <ename>&enamed;Исполнитель&enamed;</ename>
+        <ecountry>&enamed;Страна&enamed;</ecountry>
+        <eyear>&enamed;Год&enamed;</eyear>
+    </example>
+    <grammy>
+        <song>"Just like that"</song>
+        <name>Бонни Райт</name>
+        <country>США</country>
+        <year>2023</year>
+    </grammy>
+    <grammy>
+        <song>"Leave the door open"</song>
+        <name>Bruno Mars</name>
+        <country>США</country>
+        <year>2022</year></grammy>
+    <grammy>
+        <song>"I can't breathe"</song>
+        <name>H.E.R.</name>
+        <country>США</country>
+        <year>2021</year></grammy>
+</grammys>
