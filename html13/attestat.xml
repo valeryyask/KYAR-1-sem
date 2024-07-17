@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="att.xsl"?>
+<persons>
+    <example>
+        <eatt>Аттестация</eatt>
+        <ename>Имя представителя</ename>
+        <enum>Оценки</enum>
+    </example>
+    <person>
+        <name>Бабич В.С.</name>
+        <num>10</num>
+    </person>
+     <person>
+        <name>Яскевич В.А.</name>
+        <num1>7</num1>
+    </person>
+     <person>
+        <name>Угоренко В.В.</name>
+        <num2>2</num2>
+    </person>
+    </persons>

@@ -1,0 +1,80 @@
+$HeadersColor:#b876b3;
+$ulColor1: red;
+$ulColor2: yellow;
+$ulColor3: green;
+$p1Color: blue;
+$p2Color: teal;
+$p3Color: grey;
+$TableBgColor: purple;
+
+%headers{
+	font-family: Monotype Corsiva;
+}
+%font{
+	font-family: 'Times New Roman';
+}
+
+body{
+	background-color: bisque;
+}
+
+h1,h2,h3,h4,h5,h6{
+	@extend %headers;
+}
+h1,h2,h3,h4,h5,h6 p{
+	text-align: center;
+}
+
+.cl1{
+ color: $HeadColor1;
+ font-size: 18pt;
+ @extend %font;	
+}
+
+.cl2{
+	color: $HeadColor2;
+	font-size: 20pt;
+	@extend %font;	
+}
+
+.cl3{
+	color: $HeadColor3;
+	font-size: 22pt;
+	@extend %font;	
+}
+
+p{
+	font-size: 16pt;
+	@extend %font;	
+}
+
+.heade{
+	background: #f7f3f2;
+}
+
+table th, td{
+	background-color: $TableBgColor;
+}
+
+header{
+	font-size: 20px;
+}
+.redSpan{
+	color: red;
+}
+.blackSpan{
+	color: black;
+}
+
+.p1{
+	font-size: 23px;
+	color: $p1Color;
+}
+.p2{
+	font-size: 18px;
+	color: $p2Color;
+}
+.p3{
+	font-size: 14px;
+	color: $p3Color;
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>     
+        label:not(:last-child){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        label, input{
+            font-size: 1.2em;
+        }
+        form{
+            margin: 0 auto;
+            width: 660px;
+            padding: 20px;
+            background-color: indigo;
+        }
+        h2{
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
+        h2{
+            color: white;
+            margin-bottom: 30px;
+        }
+        input{
+            border-radius: 4px;
+        }
+        label{
+            color: white;
+        }
+        input[type="text"]:focus{
+            background-color: black;
+            color: black;
+        }
+        input[type="checkbox"]{
+            float: inherit;
+        }
+        input[type="text"], input[type="mail"]{
+            background-color: rgba(255,255,255,.5);
+            color: (255,255,255,1);
+            box-shadow: inset 0 0 10px rgba(255,255,255, .75);
+            width: 400px;
+        }
+        input[type="submit"]{
+            padding: 7px 25px;
+        }
+        .btn{
+            box-shadow: 0 0 4px white;
+            background-color: navy;
+            color: white;
+            padding: 5px;
+        }
+        .block_align_left{
+            width: 407.2px;
+            display: flex;
+            align-items: flex-start;
+        }
+        .block_align_center{
+            margin-left: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+        }
+        .checkbox{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h2>Регистрация постоянного клиента</h2>
+        <label for="fam">Фамилия:<input id="fam" type="text"></label>
+        <label for="name">Имя:<input id="name" type="text"></label>
+        <label for="ot">Отчество:<input id="ot" type="text"></label>
+        <label for="vozr">Ваш возраст:<input id="vozr" type="text"></label>
+        <label>Пол:
+            <div class="checkbox" style="width: 407.2px">
+                <input id="men" type="checkbox">
+                <label for="men" style="margin-bottom: 0 !important;">Мужчина</label>
+                <input id="woman" type="checkbox">
+                <label for="woman">Женщина</label>
+            </div>
+        </label>
+        <label for="email">Email:<input id="email" type="mail"></label>
+        <label for="con">Страна проживания:<input id="con" type="text"></label>
+        <label>Откуда вы узнали о нас?
+            <div class="block_align_left">
+                <select>
+                    <option disabled>Выберите вариант</option>
+                    <option value="Школа">Школа</option>
+                    <option value="Интернет">Интернет</option>
+                    <option value="Образовательная платформа">Образовательная платформа</option>
+                </select>
+            </div>
+        </label> 
+        <label for="data">Дата заполнения
+            <div class="block_align_left">
+                <input id="data" class="mail" type="date">
+            </div>
+        </label>
+        <label class="block_align_center">
+            <input class="btn" type="submit" value="Отмена"><input class="btn" type="submit" value="Регистрация">
+        </label>
+    </form>
+</body>
+</html>

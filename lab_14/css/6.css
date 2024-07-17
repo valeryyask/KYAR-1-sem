@@ -1,0 +1,70 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #b876b3;
+  font-family: Monotype Corsiva;
+}
+
+p, .cl3, .cl2, .cl1 {
+  font-family: "Times New Roman";
+}
+
+body {
+  background-color: bisque;
+}
+
+h1, h2, h3, h4, h5, h6 p {
+  text-align: center;
+}
+
+.cl1 {
+  color: red;
+  font-size: 18pt;
+}
+
+.cl2 {
+  color: yellow;
+  font-size: 20pt;
+}
+
+.cl3 {
+  color: green;
+  font-size: 22pt;
+}
+
+p {
+  font-size: 16pt;
+}
+
+.heade {
+  background: #f7f3f2;
+}
+
+table th, td {
+  background-color: purple;
+}
+
+header {
+  font-size: 20px;
+}
+
+.redSpan {
+  color: red;
+}
+
+.blackSpan {
+  color: black;
+}
+
+.p1 {
+  font-size: 23px;
+  color: blue;
+}
+
+.p2 {
+  font-size: 18px;
+  color: teal;
+}
+
+.p3 {
+  font-size: 14px;
+  color: grey;
+}/*# sourceMappingURL=6.css.map */

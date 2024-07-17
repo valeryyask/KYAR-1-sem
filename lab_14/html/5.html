@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>5</title>
+		<style type="text/css">
+			*{
+				background-color: bisque;
+			}
+		polygon:hover {
+					stroke: rgb(0, 183, 255);
+			 }
+		#cir {
+			 fill: url(#RadialGradient1);
+		}
+		
+		.stop1 {
+			 stop-color: orange;
+		}
+		
+		.stop3 {
+			 stop-color: rgb(0, 255, 255);
+		}
+		
+		#perv {
+			 fill: url(#Gradient1);
+		}
+		</style>
+</head>
+
+<body>
+   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 1080" id="svg1"
+      xmlns:xlink="http://www.w3.org/1999/xlink">
+      <animate xlink:href="#ell" attributeName="fill" from="green" to="white" dur="3s" begin="click" fill="freeze" />
+      <defs>
+         <linearGradient id="Gradient1">
+            <stop class="stop1" offset="0%" />
+            <stop class="stop3" offset="100%" />
+         </linearGradient>
+         <radialGradient id="RadialGradient1">
+            <stop offset="0%" stop-color="orange" />
+           
+            <stop offset="80%" stop-color="yellow" />
+            <stop offset="100%" stop-color="red" />
+         </radialGradient>
+         
+      </defs>
+      <circle id="cir" cx="50" cy="50" r="50" />
+      <rect x="120" y="10" height="100px" width="100px" fill="none" stroke="#E1E1E1" stroke-width="8" />
+      <rect x="120" y="10" height="100px" width="100px" transform="rotate(-90 -90 -90 -90)" fill="none"
+         stroke-dashoffset="400" stroke-dasharray="400" stroke="black" stroke-width="8">
+         <animate attributeName="stroke-dashoffset" dur="1s" begin="svg1.click" values="400;0" />
+      </rect>
+      <ellipse id="ell" cx="340" cy="50" rx="100" ry="30" fill="green" />
+      <polygon id="perv" points="500,20 575,100 425,100" stroke="black" stroke-width="4">
+
+      </polygon>
+      <polyline id="vtor" points="0,130 350,130 175,160 600,160" stroke-width="3px" stroke="purple" fill="none" />
+   </svg>
+</body>
+
+</html>
