@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фотогалерея</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .gallery {
+            display: flex;
+        }
+
+        .photo {
+            position: relative;
+            margin: 10px;
+            cursor: pointer;
+            transition: border 0.3s ease;
+        }
+
+        .photo img {
+            width: 200px;
+            height: 300px;
+        }
+
+        .description {
+            display: none;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(209, 206, 206, 0.8);
+            padding: 5px;
+            text-align: center;
+        }
+
+        .photo:hover .description {
+            display: block;
+        }
+
+        .photo {
+            cursor: pointer;
+            border: none;
+        }
+
+        .photo.clicked {
+            border: 10px solid rgb(121, 4, 4);
+        }
+    </style>
+</head>
+<body>
+<div class="gallery">
+    <div class="photo" onmouseover="showDescription(1)" onmouseout="hideDescription(1)" onclick="highlightBorder(1)">
+        <img src="3874e8c6-caaa-40a9-9702-694167f85565.jfif" alt="Фото 1">
+        <div class="description" id="desc1">Зима близко</div>
+    </div>
+    <div class="photo" onmouseover="showDescription(2)" onmouseout="hideDescription(2)" onclick="highlightBorder(2)">
+        <img src="04a35378-7d4c-4c45-89d5-535f73274e45.jfif" alt="Фото 2">
+        <div class="description" id="desc2">Бой бастарда</div>
+    </div>
+    <div class="photo" onmouseover="showDescription(3)" onmouseout="hideDescription(3)" onclick="highlightBorder(3)">
+        <img src="423e5512-a9c7-4289-a3b1-f2b0c832fbe1.jfif" alt="Фото 3">
+        <div class="description" id="desc3">Мать драконов</div>
+    </div>
+    <div class="photo" onmouseover="showDescription(4)" onmouseout="hideDescription(4)" onclick="highlightBorder(4)">
+        <img src="House of the Dragon.jfif" alt="Фото 4" id="lastPhoto">
+        <div class="description" id="desc4">Железный трон</div>
+    </div>
+</div>
+<script>
+    function showDescription(photoNumber) {
+        var description = document.getElementById('desc' + photoNumber);
+        description.style.display = 'block';
+    }
+    function hideDescription(photoNumber) {
+        var description = document.getElementById('desc' + photoNumber);
+        description.style.display = 'none';
+    }
+    function highlightBorder(photoNumber) {
+        var lastPhoto = document.getElementById('lastPhoto');
+        var photos = document.querySelectorAll('.photo');
+        photos.forEach(function(photo) {
+            photo.classList.remove('clicked');
+        });
+        if (photoNumber === 4) {
+            lastPhoto.src = 'Game of Thrones Review in 10 Seconds.jfif';
+        } else {
+            lastPhoto.src = 'House of the Dragon.jfif';
+        }
+        photos[photoNumber - 1].classList.add('clicked');
+    }
+</script>
+</body>
+</html>

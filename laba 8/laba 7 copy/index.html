@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задание</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            overflow-x: hidden;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            margin: 0 auto;
+            width: max-content;
+            height: 600px;
+        }
+        .first, .second, .third, .fourth{
+            float: left;
+            width: 300px;
+            height: 300px;
+        }
+        .first:hover{
+            transform: scale(0.5);
+        }
+        .second:hover{
+            transform: rotate(45deg);
+        }
+        .third:hover{
+            transform: translate(50px, 0);
+        }
+        .fourth:hover{
+            transform: skew(-20deg);
+        }
+        .div_first, .div_second, .div_third, .div_fourth{
+            margin-top: 50px;
+            float: left;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+        .div_first, .div_second, .div_third{
+            margin-right: 80px;
+        }
+        .div_first{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(fon3.jpg);
+            transform: perspective(300px) rotateX(25deg);
+        }
+        .div_second{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(fon4.jpg);
+            transform: perspective(300px) rotateY(45deg);
+        }
+        .div_third{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(fon5.jpg);
+            transform: perspective(300px) rotateX(25deg);
+        }
+        .div_fourth{
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-image: url(fon7.jpg);
+            transform: perspective(300px) rotateY(-45deg);
+        }
+        button{
+            margin-top: 50px;
+            padding: 15px 35px;
+            border: 2px solid black;
+            background-color: white;
+            width: 160px;
+            height: 70px;
+
+        }
+        .btn_first, .btn_second, .btn_third, .btn_fourth{
+            margin-right: 50px;
+        }
+        .btn_first:hover{
+            background-color: black;
+            color: white;
+        }
+        .btn_second:hover{
+            border: 6px solid orange;
+            outline: 6px solid yellow;
+        }
+        .btn_third:hover{
+            border-top: 6px solid green;
+            border-bottom: 6px solid green;
+            border-left: 0;
+            border-right: 0;
+        }
+        .btn_fourth:hover{
+            border-right: 6px solid blue;
+            border-left: 6px solid blue;
+            border-top: 0;
+            border-bottom: 0;
+
+        }
+        .btn_fifth:hover{
+            border: 0;
+            background: radial-gradient(yellow 5%, rgb(255, 71, 200) 50%, rgb(113, 113, 173) 70%, rgb(43, 205, 255) 90%);
+        }
+        .animation{
+            margin-top: 50px;
+            width: 600px;
+            height: 300px;
+            animation: identifier 5s linear infinite;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: 3px solid black;
+        }
+        @keyframes identifier {
+            0%{
+                background-image: url(fon1.jpg);
+            }
+            20%{
+                background-image: url(fon2.jpg);
+            }
+            40%{
+                background-image: url(fon3.jpg);
+            }
+            60%{
+                background-image: url(fon4.jpg);
+            }
+            80%{
+                background-image: url(fon5.jpg);
+            }
+            100%{
+                background-image: url(fon1.jpg);
+            }
+        }
+        .imgfirst{
+            animation: imgfirst 5s linear infinite;
+        }
+        @keyframes imgfirst {
+            0%{
+                transform: translateX(0px);
+            }
+            100%{
+                transform: translateX(200px);
+            }
+        }
+        .imgsecond{
+            animation: imgsecond 5s linear infinite;
+        }
+        @keyframes imgsecond {
+            0%{
+                border-radius: 0;
+                transform: translateX(0);
+            }
+            100%{
+                border-radius: 50%;
+                transform: translateX(200px);
+            }
+        }
+        .imgthird{
+            animation: imgthird 10s linear infinite;
+        }
+        @keyframes imgthird {
+            0%{
+                transform: translateX(-60vw);
+            }
+            100%{
+                transform: translateX(60vw);
+            }
+        }
+        .imgfourth{
+            animation: imgfourth 5s linear infinite;
+        }
+        @keyframes imgfourth {
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(40px);
+            }
+        }
+        .imgfifth{
+            margin-left: 500px;
+            margin-top: 5900px;
+            position: absolute;
+            animation: animka 5s linear infinite;
+        }
+        @keyframes animka {
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top: 0;
+                left: 200px;
+            }
+            50%{
+                top: 200px;
+                left: 200px;
+            }
+            75%{
+                top: 200px;
+                left: 0;
+            }
+            100%{
+                top: 0;
+                left: 0;
+            }
+        }
+        .block{
+            width: 300px;
+            height: 300px;
+            animation: block 10s linear infinite;
+        }
+        @keyframes block {
+            0%{
+                color: yellow;
+            }
+            20%{
+                color: red;
+            }
+            40%{
+                color: green;
+            }
+            60%{
+                color: orange;
+            }
+            80%{
+                color: purple;
+            }
+            100%{
+                color: yellow;
+            }
+        }
+        .card1, .card2, .card3, .card4{
+            position: absolute;
+            float: left;
+            width: 200px;
+            height: 200px;
+            border: 3px solid black;
+            background-color: palevioletred;
+        }
+        .card1{
+            background-image: url(fon7.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: perspective(300px) rotateY(40deg);
+            left: 280px;
+            animation: cardanimation1 10s linear infinite alternate;
+        }
+        .card2{
+            background-image: url(fon5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: perspective(300px) rotateY(40deg);
+            left: 300px;
+            animation: cardanimation2 10s linear infinite alternate;
+        }
+        .card3{
+            background-image: url(fon4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: perspective(300px) rotateY(40deg);
+            left: 320px;
+            animation: cardanimation3 10s linear infinite alternate;
+        }
+        .card4{
+            background-image: url(fon3.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            transform: perspective(300px) rotateY(40deg);
+            left: 340px;
+            animation: cardanimation4 10s linear infinite alternate;
+        }
+        @keyframes cardanimation1 {
+            0%{
+                transform: perspective(300px) rotateY(30deg);
+            }
+            50%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 280px;
+            }
+            100%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 280px;
+            }
+        }
+        @keyframes cardanimation2 {
+            0%{
+                transform: perspective(300px) rotateY(30deg);
+            }
+            50%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 300px;
+                filter: blur(0px);
+            }
+            100%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 500px;
+                filter: blur(10px);
+            }
+        }
+        @keyframes cardanimation3 {
+            0%{
+                transform: perspective(300px) rotateY(30deg);
+            }
+            50%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 320px;
+                filter: grayscale(0);
+            }
+            100%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 720px;
+                filter: grayscale(1);
+            }
+        }
+        @keyframes cardanimation4 {
+            0%{
+                transform: perspective(300px) rotateY(30deg);
+            }
+            50%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 340px;
+                filter: invert(0);
+            }
+            100%{
+                transform: perspective(300px) rotateY(0deg);
+                left: 940px;
+                filter: invert(1);
+            }
+        }
+        ul{
+            display: flex;
+        }
+        li{
+            list-style-type: none;
+            padding: 15px 40px;
+            border: 1px solid green;
+            border-width: 2px 1px 2px 1px;
+            color: green;
+            background-color: yellow;
+        }
+        li:first-child{
+            border-width: 2px 1px 2px 2px;
+        }
+        li:last-child{
+            border-width: 2px 2px 2px 1px;
+        }
+        a{
+            display: block;
+            text-decoration: none;
+        }
+        a:hover, a:active, a:focus, a:visited{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li><a class="a_1" href="#a1">Задание 1</a></li>
+            <li><a class="a_2" href="#a2">Задание 2</a></li>
+            <li><a class="a_3" href="#a3">Задание 3</a></li>
+            <li><a class="a_4" href="#a4">Задание 4</a></li>
+            <li><a class="a_5" href="#a5">Задание 5</a></li>
+            <li><a class="a_6" href="#a6">Задание 6</a></li>
+            <li><a class="a_7" href="#a7">Задание 7</a></li>
+            <li><a class="a_8" href="#a8">Задание 8</a></li>
+        </ul>
+    </div>
+    <h1 id="a1">Задание 1</h1>
+    <div class="container">
+        <img class="first" src="p1.png" alt="">
+        <img class="second" src="p2.png" alt="">
+        <img class="third" src="p3.png" alt="">
+        <img class="fourth" src="p4.png" alt="">
+    </div>
+    <h1 id="a2">Задание 2</h1>
+    <div class="container">
+        <div class="div_first"></div>
+        <div class="div_second"></div>
+        <div class="div_third"></div>
+        <div class="div_fourth"></div>
+    </div>
+    <h1 id="a3">Задание 3</h1>
+    <div class="container">
+        <button class="btn_first">Кнопка 1</button>
+        <button class="btn_second">Кнопка 2</button>
+        <button class="btn_third">Кнопка 3</button>
+        <button class="btn_fourth">Кнопка 4</button>
+        <button class="btn_fifth">Кнопка 5</button>
+    </div>
+    <h1 id="a4">Задание 4</h1>
+    <div class="container">
+        <div class="card1"></div>
+        <div class="card2"></div>
+        <div class="card3"></div>
+        <div class="card4"></div>
+    </div>
+    <h1 id="a5">Задание 5</h1>
+    <div class="container">
+        <div class="animation"></div>
+    </div>
+    <h1 id="a6">Задание 6</h1>
+    <div class="container">
+        <img class="imgfirst" src="fon7.jpg" alt="">
+    </div>
+    <div class="container">
+        <img class="imgsecond" src="fon7.jpg" alt="">
+    </div>
+    <div class="container">
+        <img class="imgthird" src="fon7.jpg" alt="">
+    </div>
+    <div class="container">
+        <img class="imgfourth" src="fon7.jpg" alt="">
+    </div>
+    <div class="container">
+        <img class="imgfifth" src="fon7.jpg" alt="">
+    </div>
+    <h1 id="a7">Задание 7</h1>
+    <div class="container">
+        <div class="block">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis modi est saepe sint odit in dolores. Unde quisquam eaque amet laboriosam quidem commodi non? Esse necessitatibus eos quae omnis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis modi est saepe sint odit in dolores. Unde quisquam eaque amet laboriosam quidem commodi non? Esse necessitatibus eos quae omnis!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic omnis modi est saepe sint odit in dolores. Unde quisquam eaque amet laboriosam quidem commodi non?</p>
+        </div>
+    </div>
+</body>
+</html>

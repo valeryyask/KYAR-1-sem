@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма</title>
+    <style>
+        form {
+            display: table;
+            border: 3px solid rgb(255, 123, 0);
+            padding: 20px; /* Увеличенный отступ */
+            background-color: rgb(255, 195, 138);
+            height: 50%;
+            width: 20%; /* Увеличенная ширина */
+            margin: 20px auto; /* Центрирование формы */
+        }
+
+        label, input {
+            display: table-row;
+            margin-bottom: 30px; /* Отступ между элементами формы */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="get" class="form-example">
+            <div class="">
+                <label for="">ФИО:</label>
+                <input class="text" type="text">
+            </div>
+            <div class="">
+                <label for="">Телефон:</label>
+                <input class="tel" type="tel">
+            </div>
+            <div class="">
+                <label for="">Email:</label>
+                <input class="email" type="email">
+            </div>
+            <div class="">
+                <label for="">Пожелания: </label>
+                <input class="wishes"></input>
+            </div>
+            <div class="">
+                <input class="btn" type="button" value="Отправить">
+            </div>
+        </form>
+    </div>
+    <footer>
+    </footer>
+    <script>
+        document.querySelector('.btn').addEventListener('click', function(){
+            const footer =  document.querySelector('footer');
+            const formElements = document.forms[0].elements.length - 1;
+            for(let x = 0; x < formElements; x++){
+                let p = document.createElement('p');
+                p.textContent = document.forms[0][x].value;
+                footer.appendChild(p);
+            }
+        });
+    </script>
+</body>
+</html>

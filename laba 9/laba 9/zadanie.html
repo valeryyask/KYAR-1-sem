@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 200px 200px 200px;
+        }
+        .block{
+            border: 2px solid black;
+            border-radius: 10px;
+            height: 200px;
+        }
+        .block:nth-child(1), .block:nth-child(2), .block:nth-child(3){
+            color: blue;
+        }
+        .block:nth-child(4), .block:nth-child(5), .block:nth-child(6){
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non explicabo optio quibusdam nihil esse! Quia sequi rem tempora eum atque voluptatibus recusandae ullam est, exercitationem ab cumque. Culpa, iusto rerum.</div>
+        <div class="block">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem possimus perspiciatis rerum, provident delectus, debitis at a laborum laudantium repudiandae magnam voluptatibus tempora est! Placeat odio eaque adipisci ab a.</div>
+        <div class="block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, est nisi veniam molestiae vero, inventore dolores laborum ab eius, porro quidem consectetur deserunt sunt accusantium vel mollitia ut tempore minima!</div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</body>
+</html>

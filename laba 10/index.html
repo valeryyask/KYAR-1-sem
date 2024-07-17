@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/large.css" rel="stylesheet" media="(max-width:
+1280px)">
+    <style>
+        @import url(css/medium.css) (max-width: 768px);
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .container{
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+        }
+        .container_element:nth-child(1){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid black;
+        }
+        .container_element:nth-child(2){
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+        .block{
+            border: 2px solid black;
+        }
+        .block:nth-child(1), .block:nth-child(3){
+            flex-grow: 2;
+        }
+        .block:nth-child(2){
+            margin: 0 20px;
+            flex-grow: 3;
+        }
+        .block:nth-child(1){
+            display: flex;
+            flex-direction: column;
+        }
+        .ul_container{
+            display: flex;
+            list-style-type: none;
+        }
+        .li_container:not(:first-child){
+            margin-left: 20px;
+        }
+        .icon{
+            position: absolute;
+            top: 2px;
+            right: 20px;
+            display: none;
+        }
+        .icon_button{
+            position: absolute;
+            opacity: 0;
+            width: 20px;
+            height: 20px;
+            top: 10px;
+            right: 20px;
+            display: none;  
+        }
+        iframe{
+            width: 300px;
+        }
+        .container_element:nth-child(3){
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        figure, img{
+            width: 100%;
+        }
+        img{
+            object-fit: cover;
+            height: 360px;
+        }
+        .fig_music{
+            color: black !important;
+        }
+        .icon_button:checked + .nav_element{
+            display: none;
+        }
+        .nav_element{
+            display: none;
+        }
+        .nav_element > ul{
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        @media screen and (max-width: 480px) {
+            .ul_container{
+                display: none;
+            }
+            .container{
+                width: 100%;
+            }
+            .block{
+                flex-basis: 100%;
+                width: 100%;
+                margin: 0 !important;
+                border: 0 !important
+            }
+            .block:nth-child(1){
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .container_element:nth-child(2){
+                flex-direction: column;
+            }
+            .icon{
+                display: block;
+                font-size: 36px;
+                font-weight: bold;
+            }
+            .icon_button{
+                display: block;
+            }
+            .nav_element{
+                display: block;
+            }
+            iframe{
+                width: 100%;
+            }
+            figcaption{
+                color: red !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="container_element">
+            <h1>«Flexbox-верстка»</h1>
+            <ul class="ul_container">
+                <li class="li_container"><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">«Flexbox-верстка»</a></li>
+                <li class="li_container"><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">«Flexbox-верстка»</a></li>
+                <li class="li_container"><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">«Flexbox-верстка»</a></li>
+            </ul>
+            <p class="icon">&#8801</p>
+        </div>
+        <input class="icon_button" type="checkbox">
+        <div class="nav_element">
+            <ul>
+                <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">«Flexbox-верстка»</a></li>
+                <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">«Flexbox-верстка»</a></li>
+                <li><a href="https://developer.mozilla.org/ru/docs/Learn/CSS/CSS_layout/Flexbox">«Flexbox-верстка»</a></li>
+            </ul>
+        </div>
+        <div class="container_element">
+            <div class="block">
+                <iframe height="170" src="https://www.youtube.com/embed/eVZEwEQg4pg?si=mtEZGYqWVbIyKvNn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe height="170" src="https://www.youtube.com/embed/fK70h0CXNsU?si=STWhXJfkzsuz16LS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <iframe height="170" src="https://www.youtube.com/embed/t2TZKG4Iypk?si=5ojRSN6uVDQD9j6C" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <div class="block">
+                <h3>flex-direction</h3>
+                <p>У flex-контейнера есть две оси: главная и перпендикулярная ей.По умолчанию все предметы располагаются вдоль главной оси — слева направо. Именно поэтому блоки в предыдущем примере выстроились в линию, когда мы применили display: flex. А вот flex-direction позволяет вращать главную ось.</p>
+                <h3>justify-content</h3>
+                <p>Space-between задаёт одинаковое расстояние между блоками, но не между контейнером и блоками. Space-around также задаёт одинаковое расстояние между блоками, но теперь расстояние между контейнером и блоками равно половине расстояния между блоками.</p>
+                <h3>align-items</h3>
+                <p>Если justify-content работает с главной осью, то align-items работает с осью, перпендикулярной главной оси. </p>
+                <p>Стоит заметить, что для align-items: stretch высота блоков должна быть равна auto. Для align-items: baseline теги параграфа убирать не нужно, иначе получится так:
+                    Как работает CSS Flexbox: наглядное введение в систему компоновки элементов на веб-странице 7
+                    
+                    Чтобы получше разобраться в том, как работают оси, объединим justify-content с align-items и посмотрим, как работает выравнивание по центру для двух свойств flex-direction</p>
+            </div>
+            <div class="block">
+                <figure>
+                    <figcaption class="fig_music">The Weeknd - Out Of Time</figcaption>
+                    <audio controls src="Weeknd - Out Of Time.mp3"></audio>
+                </figure>
+                <figure>
+                    <figcaption class="fig_music">The Weeknd - Blinding Lights</figcaption>
+                    <audio controls src="Weeknd - Blinding Lights.mp3"></audio>
+                </figure>
+                <figure>
+                    <figcaption class="fig_music">The Weeknd - Die For You (Kue Remix)</figcaption>
+                    <audio controls src="Weeknd - Die For You (Kue Remix).mp3"></audio>
+                </figure>
+            </div>
+        </div>
+        <div class="container_element">
+            <figure>
+                <img src="fon3.jpg" alt="">
+                <figcaption>Картинка 1</figcaption>
+            </figure>
+            <figure>
+                <img src="fon4.jpg" alt="">
+                <figcaption>Картинка 2</figcaption>
+            </figure>
+            <figure>
+                <img src="fon5.jpg" alt="">
+                <figcaption>Картинка 3</figcaption>
+            </figure>
+            <figure>
+                <img src="fon6.jpg" alt="">
+                <figcaption>Картинка 4</figcaption>
+            </figure>
+            <figure>
+                <img src="fon9.jpg" alt="">
+                <figcaption>Картинка 5</figcaption>
+            </figure>
+            <figure>
+                <img src="fon10.jpg" alt="">
+                <figcaption>Картинка 6</figcaption>
+            </figure>
+            <figure>
+                <img src="fon11.jpg" alt="">
+                <figcaption>Картинка 7</figcaption>
+            </figure>
+            <figure>
+                <img src="fon12.jpg" alt="">
+                <figcaption>Картинка 8</figcaption>
+            </figure>
+        </div>
+    </div>
+</body>
+</html>
